@@ -17,19 +17,19 @@ int clientes = 1;
 
 struct dados_cliente
 {
-	int id_cliente;
+    int id_cliente;
     char nome[100]; //use o gets para ler e puts para imprimir
     int idade;
     char email[254];
     char profissao[50];
     char sexo[50];
-	char rua[50];
-	char cidade[50];
-	int numero_casa;
+    char rua[50];
+    char cidade[50];
+    int numero_casa;
 };
 
 
-// Criando a Struct de Cliente;
+// Finalizando a Struct de Cliente;
 
 int i, escolha, consultaID;
 main()
@@ -47,7 +47,8 @@ main()
 	dados_cliente Cliente[clientes];
 	for(i=0;i<clientes;i++)
 	{
-		cout<<"\n\t ---- Cadastro do "<<i+1<<"º Cliente. ----"; //apresentando os dados do cliente.
+		//cadastro do Cliente.
+		cout<<"\n\t ---- Cadastro do "<<i+1<<"Âº Cliente. ----"; //apresentando os dados do cliente.
 		cout<<"\n\n\n Nome do Cliente: ";
 		fflush(stdin); //Para limpar o buffer em Windows, use o: fflush(stdin)
   		gets(Cliente[i].nome);	
@@ -56,7 +57,7 @@ main()
   		cout<<" Email do Cliente: ";
   		fflush(stdin);
   		gets(Cliente[i].email);
-  		cout<<" Profissão do Cliente: ";
+  		cout<<" ProfissÃ£o do Cliente: ";
   		fflush(stdin);
   		gets(Cliente[i].profissao);
   		cout<<" Informe o sexo do Cliente: ";
@@ -65,7 +66,7 @@ main()
   		cout<<" Informe a Rua do Cliente: ";
   		fflush(stdin);
   		gets(Cliente[i].rua);
-  		cout<<" Informe o Número da residência: ";
+  		cout<<" Informe o NÃºmero da residÃªncia: ";
   		cin>>(Cliente[i].numero_casa);
   		cout<<" Informe a Cidade do Cliente: ";
   		fflush(stdin);
@@ -76,11 +77,13 @@ main()
  		int menor = 1;
   	 	int sorteio = rand()%(maior-menor+1) + menor;
   		Cliente[i].id_cliente = sorteio;
-  		cout<<" O ID do Cliente, gerado automáticamente foi: "<<Cliente[i].id_cliente;
+  		cout<<" O ID do Cliente, gerado automÃ¡ticamente foi: "<<Cliente[i].id_cliente;
 		cout<<"\n\n";
 	}
 	
 do{ //abrindo do while
+	
+	//consultando clientes com Switch
 	cout<<"\n\t ---- Consulta de Clientes Cadastrados ----";
 	cout<<"\n\n [1] Apresentar todos os Clientes Cadastrados.";
 	cout<<"\n [2] Informe o ID do Cliente que deseja Consultar.";
@@ -94,15 +97,16 @@ do{ //abrindo do while
 			cout<<"\n\n Segue dados de todos os Clientes Cadastrados. ";
 			for (i=0;i<clientes;i++)
 			{
+				//todos os clientes cadastrados.
 				cout<<"\n-----------------------------------";					
 				cout<<"\n ID do Cliente: "<<Cliente[i].id_cliente;
 				cout<<"\n Nome do Cliente: "<<Cliente[i].nome;
   				cout<<"\n Idade do Cliente: "<<Cliente[i].idade;
   				cout<<"\n Email do Cliente: "<<Cliente[i].email;  	
-  				cout<<"\n Profissão do Cliente: "<<Cliente[i].profissao;
+  				cout<<"\n ProfissÃ£o do Cliente: "<<Cliente[i].profissao;
   				cout<<"\n Sexo do Cliente: "<<Cliente[i].sexo;
   				cout<<"\n Rua do Cliente: "<<Cliente[i].rua;
-  				cout<<"\n Número da residência: "<<Cliente[i].numero_casa;
+  				cout<<"\n NÃºmero da residÃªncia: "<<Cliente[i].numero_casa;
   				cout<<"\n Cidade do Cliente: "<<Cliente[i].cidade;
 			}
 		break;
@@ -114,16 +118,17 @@ do{ //abrindo do while
 			for (i=0;i<clientes;i++)
 			{
 				if (consultaID == Cliente[i].id_cliente)
-				{		
+				{
+					//escolhendo o cliente por ID.
 					cout<<"\n-----------------------------------";					
 					cout<<"\n ID do Cliente: "<<Cliente[i].id_cliente;
 					cout<<"\n Nome do Cliente: "<<Cliente[i].nome;
  	 				cout<<"\n Idade do Cliente: "<<Cliente[i].idade;
   					cout<<"\n Email do Cliente: "<<Cliente[i].email;  	
-  					cout<<"\n Profissão do Cliente: "<<Cliente[i].profissao;
+  					cout<<"\n ProfissÃ£o do Cliente: "<<Cliente[i].profissao;
   					cout<<"\n Sexo do Cliente: "<<Cliente[i].sexo;
   					cout<<"\n Rua do Cliente: "<<Cliente[i].rua;
-  					cout<<"\n Número da residência: "<<Cliente[i].numero_casa;
+  					cout<<"\n NÃºmero da residÃªncia: "<<Cliente[i].numero_casa;
   					cout<<"\n Cidade do Cliente: "<<Cliente[i].cidade;
 				}
 			}
