@@ -1,2 +1,2 @@
 # StructC++
-exercício complementar na faculdade com base em estruturação de dados de um cliente.
+Exercício complementar na faculdade com base em estruturação de dados de um cliente.
